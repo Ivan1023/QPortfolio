@@ -1,0 +1,18 @@
+@import './Style/styles.scss';
+
+
+.App {
+  // text-align: left;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+
+  @include tablet-view {
+    display: flex;
+  }
+
+}
+
+
+

@@ -1,0 +1,63 @@
+@import '../../Style/styles.scss';
+@import '../../Style/font.scss';
+
+.portfolio {
+    display:flex;
+    flex-direction: column;
+    min-height: 74vh;
+    padding: 0 20px;
+    width: 100%;
+
+    &__title {
+        color: #526B95;
+        font-size: 32px;
+        padding-left: 30px;
+    }
+
+    &__sub-header {
+        margin: 10px 0;
+        font-size: 20px
+    }
+
+    &__details {
+        margin: 0 0 10px 0;
+    }
+
+    &__img {
+        width: 100%;
+        // width: 50%;
+        // height: 200px;
+
+        @include tablet-view {
+            width: 250px
+        }
+
+        @include desktop-view  {
+            width: 300px
+        }
+
+    }
+
+    &__project-containers {
+        padding: 30px;
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-evenly;
+    }
+
+    @include tablet-view {
+        padding: 75px 50px 0 50px ;
+    }
+
+    @include tablet-desktop {
+        padding: 75px 100px 0 100px ;
+    }
+
+    @include desktop-view{
+        padding: 75px 150px 0 150px ;
+    }
+}

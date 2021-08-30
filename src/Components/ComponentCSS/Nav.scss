@@ -1,0 +1,278 @@
+@import '../../Style/styles.scss';
+@import '../../Style/font.scss';
+
+.nav {
+    // width: 100%;
+    position: sticky;
+    top:0;
+    background-color: white;
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+
+
+      &__img {
+          width: 100%;
+      }
+    } 
+
+    &__list {
+      margin: 12px 0;
+    }
+
+    &__resume {
+      padding: 12px 0;
+    }
+
+    &__mobile {
+
+      @include tablet-view {
+          display: none;
+        }
+    }
+
+    &__tablet {
+
+      &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__listContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__logo {
+        // background-color: #526B95;
+        text-align: center;
+        padding: 14px 0;
+
+
+        &__img {
+            width: 100%;
+        }
+      }
+
+      &__title {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: $font-bold;
+        margin: 30px 0 10px 0;
+      }
+
+      &__list {
+        margin: 5px 0;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $font-normal;
+        color: #F5F7F8;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      @include mobile-tablet {
+        display: none;
+      }
+
+      @include tablet-view {
+        position: sticky;
+        z-index: 1000;
+        top:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #2A2D2F;
+        color: white;
+        // min-width: 250px;
+        // width: 300px;
+        width: 275px;
+        height: 100vh;
+      }
+
+      @include tablet-desktop {
+        position: sticky;
+        z-index: 1000;
+        top:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #2A2D2F;
+        color: white;
+        // min-width: 250px;
+        width: 345px;
+        height: 100vh;
+      }
+
+
+    }
+
+
+}
+
+.nav.active {
+  width: 100%;
+  position: sticky;
+  top:0;
+  z-index: 1000;
+  background-color: #526B95;
+  
+  &__logo {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+
+      &__img {
+          width: 100%;
+      }
+  } 
+
+  @include tablet-view {
+      display: none;
+  }
+}
+
+.desktopFooter{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+
+  &__iconContainer{
+    display: flex;
+    justify-content: space-between;
+
+    &__icon {
+      // background-color: white;
+      // color: white
+      font-size: 12px
+    }
+  }
+
+  &__copyright {
+    align-self: center;
+    font-size: 12px;
+  }
+
+
+}
+
+.burger{
+    // height: 24px;
+    // width: 24px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 25px;
+    left: 20px;
+    // color: #526B95;
+    color: white;
+}
+
+
+
+
+.logo {
+    width: 58px;
+}
+
+.menu-logo {
+    background-color: #526B95;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.bm-burger-button {
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    left: 20px;
+    top: 30px;
+  }
+   
+  /* Color/shape of burger icon bars */
+  // .bm-burger-bars {
+  //   // background: #526B95;
+  //   // background: grey;
+  // }
+   
+  // /* Color/shape of burger icon bars on hover*/
+  // .bm-burger-bars-hover {
+  //   background: white
+  // }
+   
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    // height: 24px;
+    // width: 24px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 25px;
+    left: 20px;
+  }
+   
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #F5F7F8;
+  }
+   
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+  }
+   
+  /* General sidebar styles */
+  .bm-menu {
+    // background: #373a47;
+    background: rgb(250, 250, 250);
+    font-size: 1.15em;
+  }
+   
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+   
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    // padding: 0.8em;
+  }
+   
+  /* Individual item */
+  .bm-item {
+    // display: inline-block;
+    outline: none; 
+    text-align: center;
+    font-size: 20px;
+    color: #2A2D2F;
+    border-bottom: 0.5px solid lightgray  ;
+  }
+   
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  a {
+    text-decoration: none;
+    color: #a09f98;
+  }

@@ -1,0 +1,27 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    min-height: 74vh;
+
+    &__title {
+        font-size: 32px;
+        color: #526B95
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__sub-header {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 20px 0 10px 0;
+    }
+
+    &__details {
+        margin-bottom: 30px;
+    }
+
+    
+}
