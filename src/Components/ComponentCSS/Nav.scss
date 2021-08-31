@@ -7,6 +7,11 @@
     top:0;
     background-color: white;
 
+    &__img {
+      width: 15px;
+      margin-left: 5px;
+    }
+
     &__logo {
       display: flex;
       justify-content: center;
@@ -25,6 +30,7 @@
 
     &__resume {
       padding: 12px 0;
+      cursor: pointer;
     }
 
     &__mobile {
@@ -35,6 +41,11 @@
     }
 
     &__tablet {
+
+      &__img {
+        width: 15px;
+        margin-left: 5px;
+      }
 
       &__container{
         display: flex;
@@ -72,6 +83,7 @@
         font-weight: 400;
         font-family: $font-normal;
         color: #F5F7F8;
+        cursor: pointer;
       }
 
       @include mobile {

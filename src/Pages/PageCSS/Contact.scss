@@ -1,9 +1,27 @@
+@import '../../Style/styles.scss';
+@import '../../Style/font.scss';
+
 .form {
     display: flex;
     flex-direction: column;
     // position: relative;
     padding: 0 20px;
     min-height: 72vh;
+
+    &__imgIcon {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        padding-top: 20px;
+
+        &__icon{
+            width: 40px;
+        }
+    }
+
+    &__container {
+        margin-bottom: 20px; 
+    }
 
     &__title {
         margin: 0;
@@ -86,6 +104,18 @@
         position: absolute;
         top: 15px;
         right: 12px;
+    }
+
+    @include tablet-view {
+        padding: 75px 50px 0 50px ;
+    }
+
+    @include tablet-desktop {
+        padding: 75px 100px 0 100px ;
+    }
+
+    @include desktop-view{
+        padding: 75px 150px 0 150px ;
     }
 }
 

@@ -11,6 +11,8 @@ import Linkedin from '../Assets/Footer/linkedinReverse.svg'
 import Twitter from '../Assets/Footer/twitterReverse.svg'
 import Git from '../Assets/Footer/gitReverse.svg'
 import Email from '../Assets/Footer/mailReverse.svg'
+import Download from '../Assets/Nav/download.svg'
+import DownloadBlack from '../Assets/Nav/downloadBlack.svg'
 
 export default function Nav (){
     const [isOpen, setIsOpen] = useState(false)
@@ -45,8 +47,8 @@ export default function Nav (){
                     <Link to={'/'} className='menu-logo'><img onClick={() => closeMenu()} src={LogoReverse} className="logo" alt="article cover"></img></Link>
                     <Link to={'/About'}><p onClick={() => closeMenu()} className='nav__list'>About Me</p></Link>
                     <Link to={'/Portfolio'}><p onClick={() => closeMenu()} className='nav__list'>Portfolio</p></Link>
-                    <Link to={'/Blog'}><p onClick={() => closeMenu()} className='nav__list'>Blog</p></Link>
-                    <div className='nav__resume' onClick={()=>{window.open(Resume)}}>Resume</div>
+                    {/* <Link to={'/Blog'}><p onClick={() => closeMenu()} className='nav__list'>Blog</p></Link> */}
+                    <div className='nav__resume' onClick={()=>{window.open(Resume)}}>Resume<img src={DownloadBlack} className='nav__img'/></div>
                     <Link to={'/Contact'}><p onClick={() => closeMenu()} className='nav__list'>Contact</p></Link>
                 </Menu>
                 {
@@ -72,7 +74,7 @@ export default function Nav (){
                         <Link to={'/About'}><p  className='nav__tablet__list'>About Me</p></Link>
                         <Link to={'/Portfolio'}><p  className='nav__tablet__list'>Portfolio</p></Link>
                         {/* <Link to={'/Blog'}><p  className='nav__tablet__list'>Blog</p></Link> */}
-                        <div className='nav__tablet__list' onClick={()=>{window.open(Resume)}}>Resume</div>
+                        <div className='nav__tablet__list' onClick={()=>{window.open(Resume)}}>Resume<img src={Download} className='nav__tablet__img'/></div>
                         <Link to={'/Contact'}><p  className='nav__tablet__list'>Contact</p></Link>    
                     </div>
                 </div>

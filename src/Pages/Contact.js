@@ -4,6 +4,8 @@ import './PageCSS/Contact.scss'
 import emailjs from 'emailjs-com';
 import Exit from '../Assets/Misc/exit.svg'
 import GreenCheck from '../Assets/Misc/greenCheckMark.svg'
+import Linkedin from '../Assets/Footer/linkedinBlackBG.svg'
+import Twitter from '../Assets/Footer/twitterBlackBG.svg'
 
 const customStyles = {
     content : {
@@ -63,7 +65,7 @@ export default function Contact(){
                 'message': message, 
             }
 
-            emailjs.send(`${process.env.REACT_APP_EMAILJS_SERVICE_ID}`, 'template_t4o8lgg', templateParam, `${process.env.REACT_APP_EMAILJS_USERID}`)
+            emailjs.send(`${process.env.REACT_APP_EMAILJS_SERVICE_ID}`, 'template_cjbhkug', templateParam, `${process.env.REACT_APP_EMAILJS_USERID}`)
             .then((result) => {
                 setModalIsOpen(true)
             }, (error) => {
@@ -94,9 +96,13 @@ export default function Contact(){
             :
             null}
             
-            <div>
+            <div className='form__container'>
                 <h1 className='form__header' >Contact</h1>
                 <p className='form__title'>Copy about how you’re open to people contacting you via twitter, linked in or use the form below.</p>
+                <div className='form__imgIcon'>
+                    <img src={Linkedin} className='form__imgIcon__icon'/>
+                    <img src={Twitter} className='form__imgIcon__icon'/>
+                </div>
             </div>
             <form className="form__contact" onSubmit={sendEmail}>
                 <div className='form__details'>

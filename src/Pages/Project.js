@@ -15,7 +15,7 @@ export default function Portfolio() {
                 {item.id === value ?
                 <>
                     <h1 className='project__title'>{item.project}</h1>
-                    <div>
+                    <div className='project__container'>
                         <img className='project__img' alt='project' src={Placeholder}/>
                         <h3 className='project__sub-header'>More Info</h3>
                         <p className='project__details'>{item.details}</p>
