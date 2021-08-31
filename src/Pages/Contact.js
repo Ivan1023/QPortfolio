@@ -65,7 +65,7 @@ export default function Contact(){
                 'message': message, 
             }
 
-            emailjs.send(`${process.env.REACT_APP_EMAILJS_SERVICE_ID}`, 'template_cjbhkug', templateParam, `${process.env.REACT_APP_EMAILJS_USERID}`)
+            emailjs.send(`${process.env.REACT_APP_EMAILJS_SERVICE_ID}`, 'template_t4o8lgg', templateParam, `${process.env.REACT_APP_EMAILJS_USERID}`)
             .then((result) => {
                 setModalIsOpen(true)
             }, (error) => {
