@@ -8,7 +8,7 @@ import DesktopLogo from '../Assets/Logo/DesktopLogo.svg'
 import Burger from '../Assets/Misc/burgerMenu.svg'
 import Resume from '../Assets/Resume/QH_resume_portfolio.pdf'
 import Linkedin from '../Assets/Footer/linkedinReverse.svg'
-import Twitter from '../Assets/Footer/twitterReverse.svg'
+// import Twitter from '../Assets/Footer/twitterReverse.svg'
 import Git from '../Assets/Footer/gitReverse.svg'
 import Email from '../Assets/Footer/mailReverse.svg'
 import Download from '../Assets/Nav/download.svg'
@@ -48,7 +48,7 @@ export default function Nav (){
                     <Link to={'/About'}><p onClick={() => closeMenu()} className='nav__list'>About Me</p></Link>
                     <Link to={'/Portfolio'}><p onClick={() => closeMenu()} className='nav__list'>Portfolio</p></Link>
                     {/* <Link to={'/Blog'}><p onClick={() => closeMenu()} className='nav__list'>Blog</p></Link> */}
-                    <div className='nav__resume' onClick={()=>{window.open(Resume)}}>Resume<img src={DownloadBlack} className='nav__img'/></div>
+                    <div className='nav__resume' onClick={()=>{window.open(Resume)}}>Resume<img src={DownloadBlack} alt='download resume' className='nav__img'/></div>
                     <Link to={'/Contact'}><p onClick={() => closeMenu()} className='nav__list'>Contact</p></Link>
                 </Menu>
                 {
@@ -74,16 +74,16 @@ export default function Nav (){
                         <Link to={'/About'}><p  className='nav__tablet__list'>About Me</p></Link>
                         <Link to={'/Portfolio'}><p  className='nav__tablet__list'>Portfolio</p></Link>
                         {/* <Link to={'/Blog'}><p  className='nav__tablet__list'>Blog</p></Link> */}
-                        <div className='nav__tablet__list' onClick={()=>{window.open(Resume)}}>Resume<img src={Download} className='nav__tablet__img'/></div>
+                        <div className='nav__tablet__list' onClick={()=>{window.open(Resume)}}>Resume<img src={Download} alt='download resume' className='nav__tablet__img'/></div>
                         <Link to={'/Contact'}><p  className='nav__tablet__list'>Contact</p></Link>    
                     </div>
                 </div>
                 <div className='desktopFooter'>
                     <div className='desktopFooter__iconContainer'>
-                        <div className='desktopFooter__iconContainer__icon'><img alt='email' src={Email}/></div>
-                        <div className='desktopFooter__iconContainer__icon'><img alt='git' src={Git}/></div>
-                        <div className='desktopFooter__iconContainer__icon'><img alt='twitter' src={Twitter}/></div>
-                        <div className='desktopFooter__iconContainer__icon'><img alt='linkedin' src={Linkedin}/></div>
+                        <div className='desktopFooter__iconContainer__icon'><img alt='email' onClick={()=>{window.open('mailto:queeniehu@gmail.com')}} src={Email}/></div>
+                        <div className='desktopFooter__iconContainer__icon'><img alt='git' onClick={()=>{window.open('https://github.com/conibear')}} src={Git}/></div>
+                        {/* <div className='desktopFooter__iconContainer__icon'><a href='mailto:queeniehu@gmail.com'/><img alt='twitter' src={Twitter}/></div> */}
+                        <div className='desktopFooter__iconContainer__icon'><img alt='linkedin' onClick={()=>{window.open('https://www.linkedin.com/in/queenie-hu-phd-566464b7/')}} src={Linkedin}/></div>
                     </div>
                     <p className='desktopFooter__copyright'> &copy; 2020 Queenie Hu</p>
                 </div>

@@ -9,7 +9,7 @@ import About from './Pages/About'
 import Portfolio from './Pages/Portfolio'
 import Project from './Pages/Project'
 import Contact from './Pages/Contact'
-import Blog from './Pages/Blog'
+// import Blog from './Pages/Blog'
 import BlogDetail from './Pages/BlogDetails'
 
 require('dotenv').config()
@@ -25,7 +25,7 @@ export default function App() {
           <Route path="/Portfolio" component={Portfolio}/>
           <Route path="/Project/:value?" component={Project}/>
           <Route path="/Contact" component={Contact}/>
-          <Route path="/Blog" component={Blog}/>
+          {/* <Route path="/Blog" component={Blog}/> */}
           <Route path="/BlogDetails/:value?" component={BlogDetail}/>
         </Switch>
         <Footer/>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {  useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Read from '../Assets/Blog/book-open.svg'
 import DataSet from '../helper/blogData'
 import './PageCSS/Blog.scss'
@@ -22,7 +22,7 @@ export default function Blog() {
                             <p className='blog__preview'>{item.blogPreview}</p>
                             <Link to={`/BlogDetails/${item.id}`}>
                                 <div className='blog__details'>
-                                    <img src={Read}/>
+                                    {/* <img src={Read}/> */}
                                     <p className='blog__sub-header'>Read More</p>
                                 </div>
                             </Link>

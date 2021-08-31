@@ -9,13 +9,24 @@
     min-height: 72vh;
 
     &__imgIcon {
-        display: flex;
-        justify-content: space-between;
-        width: 100px;
-        padding-top: 20px;
+        display: none;
+        // justify-content: space-between;
+        // width: 100px;
+        // padding-top: 20px;
 
-        &__icon{
-            width: 40px;
+        // &__icon{
+        //     width: 40px;
+        // }
+
+        @include tablet-view {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            padding-top: 20px;
+
+            &__icon{
+                width: 40px;
+            }
         }
     }
 

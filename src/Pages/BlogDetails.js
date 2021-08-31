@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import {  useParams  } from "react-router-dom";
-import DataSet from '../helper/blogData'
+import React from 'react';
+// import {  useParams  } from "react-router-dom";
+// import DataSet from '../helper/blogData'
 import './PageCSS/BlogDetails.scss'
 
 export default function BlogDetails() { 
-    const { value } = useParams();
-    const [ state ] = useState(DataSet);
-
-    console.log(value)
+    // const { value } = useParams();
+    // const [ state ] = useState(DataSet);
 
     return (
         <div>
-           {state.map((item)=>
+           {/* {state.map((item)=>
                <>
                {item.id === value ?
                 <div className='blogDetails'>
@@ -23,7 +21,7 @@ export default function BlogDetails() {
                : null
                }
                </>
-           )}
+           )} */}
         </div>
     )
 }

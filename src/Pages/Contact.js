@@ -5,7 +5,7 @@ import emailjs from 'emailjs-com';
 import Exit from '../Assets/Misc/exit.svg'
 import GreenCheck from '../Assets/Misc/greenCheckMark.svg'
 import Linkedin from '../Assets/Footer/linkedinBlackBG.svg'
-import Twitter from '../Assets/Footer/twitterBlackBG.svg'
+import Email from '../Assets/Footer/emailBlackBG.svg'
 
 const customStyles = {
     content : {
@@ -91,7 +91,7 @@ export default function Contact(){
             { serverError ? 
             <div className='form__serverError'>
                 <p className="margin">Unfortunately there was an error in submitting your message. Please refresh and try again.</p>
-                <img className='form__exitImg' src={Exit} onClick={()=>{setServerError(false)}}/>
+                <img alt='exit icon' className='form__exitImg' src={Exit} onClick={()=>{setServerError(false)}}/>
             </div>
             :
             null}
@@ -100,8 +100,8 @@ export default function Contact(){
                 <h1 className='form__header' >Contact</h1>
                 <p className='form__title'>Copy about how you’re open to people contacting you via twitter, linked in or use the form below.</p>
                 <div className='form__imgIcon'>
-                    <img src={Linkedin} className='form__imgIcon__icon'/>
-                    <img src={Twitter} className='form__imgIcon__icon'/>
+                    <img alt='linkedin icon' src={Linkedin} onClick={()=>{window.open('https://www.linkedin.com/in/queenie-hu-phd-566464b7/')}} className='form__imgIcon__icon'/>
+                    <img alt='email icon' src={Email} onClick={()=>{window.open('mailto:queeniehu@gmail.com')}} className='form__imgIcon__icon'/>
                 </div>
             </div>
             <form className="form__contact" onSubmit={sendEmail}>
@@ -129,7 +129,7 @@ export default function Contact(){
             style={customStyles}
             contentLabel="Example Modal"
             >
-                <img className='check' src={GreenCheck}/>
+                <img alt='Success icon' className='check' src={GreenCheck}/>
                 <p>You have successfully sent the message to Queenie.</p>
                 <button className='btn' onClick={closeModal}>Return to Contact</button>
             </Modal>
