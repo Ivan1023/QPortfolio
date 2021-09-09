@@ -69,8 +69,12 @@ export default function Nav (){
                     <div >
                         <Link to={'/'} ><img  src={DesktopLogo} className='nav__tablet__logo' alt="article cover"></img></Link>
                     </div>
+                    <section className='nav__tablet__titleContainer' >
+                        <p className='nav__tablet__titleContainer__title'>Queenie Hu, PhD</p>
+                        <p className='nav__tablet__titleContainer__subtitle'>Scientist | Data Analyst</p>
+                        {/* <p className='nav__tablet__titleContainer__subtitle'>Using data to craft scientist stories</p> */}
+                    </section>
                     <div className='nav__tablet__listContainer'>
-                        <p className='nav__tablet__title'>Data Scientist</p>
                         <Link to={'/About'}><p  className='nav__tablet__list'>About Me</p></Link>
                         <Link to={'/Portfolio'}><p  className='nav__tablet__list'>Portfolio</p></Link>
                         {/* <Link to={'/Blog'}><p  className='nav__tablet__list'>Blog</p></Link> */}
